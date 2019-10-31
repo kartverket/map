@@ -2,6 +2,9 @@
 
 node_modules
 dist
-*.log
+.vs
 
+*.log
 .cache
+
+package-lock.json
