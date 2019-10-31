@@ -1,6 +1,7 @@
 \.npmrc
 
 node_modules
+dist
 *.log
 
 .cache
