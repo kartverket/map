@@ -1,10 +1,7 @@
 \.npmrc
 
 node_modules
-dist
 .vs
 
 *.log
 .cache
-
-package-lock.json
