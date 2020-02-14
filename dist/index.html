@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="/main.1f19ae8e.css"></head>
 
 <body>
-    <div id="root"></div>
+    <!-- Openlayers needs a specified heigh and width itself or a specified outer heigh and width  !!! -->
+    <div id="root" style="height:800px; width:800px"></div>
     
     <script src="/main.1f19ae8e.js" type="text/javascript"></script>
 
@@ -14,8 +15,16 @@
 params.mapItems = [{
   'Title': 'Abas',
   'DistributionProtocol': 'OGC:WMS',
-  'GetCapabilitiesUrl': 'https://openwms.statkart.no/skwms1/wms.adm_enheter?request=GetCapabilities&service=WMS',
-  'addLayers': ['Administrative_enheter_2018']
+  'GetCapabilitiesUrl': 'https://openwms.statkart.no/skwms1/wms.adm_enheter2?request=GetCapabilities&service=WMS',
+  'addLayers': ['fylker_gjel', 'kommuner_gjel']
+}, {
+  'Title': 'SFKB-Transakjsoner',
+  'DistributionProtocol': 'OGC:WMS',
+  'customParams': {
+    TIME: '2019-01-01 00:00:00/2020-01-01 00:00:00'
+  },
+  'GetCapabilitiesUrl': 'https://wms.geonorge.no/skwms1/wms.sfkb-transaksjoner?request=GetCapabilities&service=WMS',
+  'addLayers': ['bygning']
 }];
 params.zoom = 3;
 params.lat = 7184670.676487714;
